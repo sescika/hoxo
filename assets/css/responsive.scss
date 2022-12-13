@@ -1,0 +1,133 @@
+@import "variables";
+@import "style";
+@media screen and (max-width: 1025px){
+  #cover {
+    .wrapper {
+        #timerHolder{
+            padding: 50px;
+            p {
+                font-size: 32px;
+            }
+        }
+    }
+    #coverHeader {
+        h2, h3 {
+            font-size: 22px;
+        }
+    }
+  }
+}
+@media screen and (max-width: 769px){   
+    header {
+        .wrapper {
+            nav#navigation{
+                display: none;
+            }
+            #hamburger {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 30px;
+                i {
+                    font-size: 30px;
+                    color: $color2;
+                }
+
+            }
+        }
+        nav#mobileNav {
+            ul {
+                li {
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    #cover {
+        height: 43vh;
+        .wrapper {
+            #timerHolder{
+                padding: 50px;
+                p {
+                    font-size: 26px;
+                }
+            }
+        }
+        #coverHeader {
+            h2, h3 {
+                font-size: 18px;
+            }
+        }
+    }
+    #sliderContainer {
+        .slider {
+            width: 90%;
+            .slider__slides {
+
+                .slider__slide {
+                    font-size: 30px;
+                }
+            }
+
+            .slider__nav-button {
+                width: 40px;
+                height: 40px;
+            }
+            .slider__nav {
+                .slider__navlink {
+                    height: 10px;
+                    width: 10x;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 601px){
+    header {
+        .wrapper {
+            nav {
+                display: none;
+            }
+            #hamburger {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 20px;
+                a {
+                    i {
+                        font-size: 30px;
+                        color: $color2;
+                    }
+                }
+            }
+        }
+        nav#mobileNav {
+            ul {
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    #cover {
+        .wrapper {
+            #timerHolder{
+                padding: 30px;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+        #coverHeader {
+            h2, h3 {
+                font-size: 20px;
+            }
+        }
+      }
+}

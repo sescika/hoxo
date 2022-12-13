@@ -1,0 +1,399 @@
+/*$color1: #ECDBAD;
+$color2: #C15143;
+$color3: #4B402A;
+$color4: #CCDBB2;
+$color5: #F1FACF;*/
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+/*$color1: #ECDBAD;
+$color2: #C15143;
+$color3: #4B402A;
+$color4: #CCDBB2;
+$color5: #F1FACF;*/
+@font-face {
+  font-family: myFont;
+  src: url("../fonts/Kaushan Script Regular.ttf");
+}
+body {
+  font-family: myFont;
+  background-image: url("../img/snow.gif");
+  background-color: rgba(0, 0, 0, 0.1333333333);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0px auto;
+}
+
+header {
+  background-color: #F2F2F2;
+  background-image: url("../img/snow.gif");
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+header .wrapper #logo {
+  margin-right: 30px;
+}
+header .wrapper nav {
+  border-radius: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+header .wrapper nav ul {
+  margin: 0px;
+}
+header .wrapper nav ul li {
+  border-radius: 30px;
+  padding: 10px;
+  display: inline-block;
+  transition: 0.7s all;
+}
+header .wrapper nav ul li:hover {
+  background-color: #F22E2E;
+}
+header .wrapper nav ul li a {
+  font-size: 20px;
+  color: #fff;
+  padding: 30px;
+}
+header .wrapper #hamburger {
+  display: none;
+}
+header nav#mobileNav {
+  display: none;
+}
+header nav#mobileNav ul {
+  margin: 0px;
+  padding: 5px;
+}
+header nav#mobileNav ul li {
+  margin-top: 2px;
+  border: 1px solid #000;
+  background-color: #F22E2E;
+  border-radius: 30px;
+  padding: 10px;
+  display: block;
+  transition: 0.7s all;
+}
+header nav#mobileNav ul li:hover {
+  background-color: #F2F2F2;
+}
+header nav#mobileNav ul li a {
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+#cover .wrapper #timerHolder {
+  padding: 75px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+}
+#cover .wrapper #timerHolder p {
+  margin: 0px;
+  color: #F22E2E;
+  font-size: 42px;
+}
+#cover #coverHeader h2, #cover #coverHeader h3 {
+  text-align: center;
+  color: #F22E2E;
+}
+
+#sliderContainer .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sliderContainer .wrapper .slider {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3333333333);
+  border: 3px solid #000;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+#sliderContainer .wrapper .slider .slider__slides {
+  width: 100%;
+  padding-top: 66%;
+}
+#sliderContainer .wrapper .slider .slider__slides .slider__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  opacity: 0;
+}
+#sliderContainer .wrapper .slider .slider__slides .slider__slide.active {
+  opacity: 1;
+}
+#sliderContainer .wrapper .slider #btnPrev {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+#sliderContainer .wrapper .slider #btnPrev:hover {
+  background-color: #000;
+  transition: 0.3s all;
+}
+#sliderContainer .wrapper .slider #btnPrev::after {
+  content: "";
+  position: absolute;
+  border: solid #fff;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 40%;
+  height: 40%;
+  top: 50%;
+  right: 50%;
+  transform: translate(75%, -50%) rotate(135deg);
+}
+#sliderContainer .wrapper .slider #btnNext {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+#sliderContainer .wrapper .slider #btnNext:hover {
+  background-color: #000;
+  transition: 0.3s all;
+}
+#sliderContainer .wrapper .slider #btnNext::after {
+  content: "";
+  position: absolute;
+  border: solid #fff;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 40%;
+  height: 40%;
+  top: 50%;
+  right: 50%;
+  transform: translate(25%, -50%) rotate(-45deg);
+}
+#sliderContainer .wrapper .slider .slider__nav-button {
+  border-radius: 50%;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  opacity: 0.8;
+  cursor: pointer;
+}
+#sliderContainer .wrapper .slider .slider__nav {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+#sliderContainer .wrapper .slider .slider__nav .slider__navlink {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px #fff solid;
+  background-color: rgba(0, 0, 0, 0.5333333333);
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+#sliderContainer .wrapper .slider .slider__nav .slider__navlink.active {
+  background-color: #F2F2F2;
+}
+
+#traditions .container {
+  border: 2px solid black;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3333333333);
+  background-color: #F2F2F2;
+  color: #000;
+}
+#traditions .container .row .factImg img {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3333333333);
+}
+
+#aboutChristmas {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#aboutChristmas .wrapper #info {
+  background-color: #F2F2F2;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3333333333);
+  width: 100%;
+  border: 2px solid #000;
+  padding: 20px;
+  border-radius: 5px;
+}
+#aboutChristmas .wrapper #info p {
+  width: inherit;
+  background-color: inherit;
+}
+#aboutChristmas .wrapper #info-nav {
+  margin: 0;
+  padding: 3px 0;
+  width: 100%;
+  list-style: none;
+}
+#aboutChristmas .wrapper #info-nav li {
+  display: inline;
+  border: 2px solid #000;
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: 0;
+  margin-right: 3px;
+  padding: 10px;
+}
+#aboutChristmas .wrapper #info-nav li a {
+  border-radius: 0px 5px 5px 5px;
+  font-size: 20px;
+  color: #000;
+}
+#aboutChristmas .wrapper #info-nav li a:hover {
+  color: #F22E2E;
+}
+#aboutChristmas .wrapper #info-nav li.current {
+  background-color: #F2F2F2;
+  padding-bottom: 10px;
+}
+#aboutChristmas .wrapper #info-nav li.current a {
+  color: #F22E2E;
+}
+
+#bttBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+#bttBtn:hover {
+  cursor: pointer;
+  background-color: #000;
+}
+#bttBtn i {
+  font-size: 30px;
+  color: #F2F2F2;
+}
+
+@media screen and (max-width: 1025px) {
+  #cover .wrapper #timerHolder {
+    padding: 50px;
+  }
+  #cover .wrapper #timerHolder p {
+    font-size: 32px;
+  }
+  #cover #coverHeader h2, #cover #coverHeader h3 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 769px) {
+  header .wrapper nav#navigation {
+    display: none;
+  }
+  header .wrapper #hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+  header .wrapper #hamburger i {
+    font-size: 30px;
+    color: #537334;
+  }
+  header nav#mobileNav ul li a {
+    font-size: 16px;
+  }
+  #cover {
+    height: 43vh;
+  }
+  #cover .wrapper #timerHolder {
+    padding: 50px;
+  }
+  #cover .wrapper #timerHolder p {
+    font-size: 26px;
+  }
+  #cover #coverHeader h2, #cover #coverHeader h3 {
+    font-size: 18px;
+  }
+  #sliderContainer .slider {
+    width: 90%;
+  }
+  #sliderContainer .slider .slider__slides .slider__slide {
+    font-size: 30px;
+  }
+  #sliderContainer .slider .slider__nav-button {
+    width: 40px;
+    height: 40px;
+  }
+  #sliderContainer .slider .slider__nav .slider__navlink {
+    height: 10px;
+    width: 10x;
+  }
+}
+@media screen and (max-width: 601px) {
+  header .wrapper nav {
+    display: none;
+  }
+  header .wrapper #hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  header .wrapper #hamburger a i {
+    font-size: 30px;
+    color: #537334;
+  }
+  header nav#mobileNav ul li a {
+    font-size: 14px;
+  }
+  #cover .wrapper #timerHolder {
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  #cover .wrapper #timerHolder p {
+    font-size: 24px;
+  }
+  #cover #coverHeader h2, #cover #coverHeader h3 {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

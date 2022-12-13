@@ -1,0 +1,327 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+@import "variables";
+
+@font-face {
+    font-family: myFont;
+    src: url('../fonts/Kaushan\ Script\ Regular.ttf');
+}
+
+body {
+    font-family: myFont;
+    background-image: url("../img/snow.gif");
+    background-color: #0002;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0px auto;
+}
+
+header {
+    background-color: $color1;
+    background-image: url("../img/snow.gif");
+    .wrapper {
+        display: flex;
+        justify-content: space-between; 
+        #logo {
+         margin-right: 30px;
+        }
+        nav {
+            border-radius: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            background-color: #0009;
+            ul {
+                margin: 0px;
+                li {
+                    border-radius: 30px;
+                    padding: 10px;
+                    display: inline-block;
+                    transition: 0.7s all;
+                    &:hover {
+                        background-color: $color5;
+                    }
+                    a {
+                        font-size: 20px;
+                        color: #fff;
+                        padding: 30px;
+                    }
+                }
+            }
+            
+        }
+        #hamburger {
+            display: none;
+        }
+
+    }
+    nav#mobileNav {
+        display: none;
+        ul {
+            margin: 0px;
+            padding: 5px;
+            li {
+                margin-top: 2px;
+                border: 1px solid #000;
+                background-color: $color5;
+                border-radius: 30px;
+                padding: 10px;
+                display: block;
+                transition: 0.7s all;
+                &:hover {
+                    background-color: $color1;
+                }
+                a {
+                    text-align: center;
+                    font-size: 18px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+#cover {
+    .wrapper {
+        #timerHolder {
+            padding: 75px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            background-color: #0009;
+            border-radius: 30px;
+            p {
+                margin: 0px;
+                color: $color5;
+                font-size: 42px;
+            }
+        }
+    }
+    #coverHeader {
+        h2, h3 {
+            text-align: center;
+            color: $color5;
+        }
+    }
+}
+
+#sliderContainer {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        .slider {
+        box-shadow: 10px 10px 5px #0005;
+        border: 3px solid #000;
+        border-radius: 10px;
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        overflow: hidden;
+        .slider__slides {
+            width: 100%;
+            padding-top: 66%;
+            .slider__slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 50px;
+                font-weight: bold;   
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: 1s;
+                opacity: 0;
+            }
+            .slider__slide.active {
+                opacity: 1;
+            }
+        }
+        #btnPrev {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            &:hover {
+                background-color: #000;
+                transition: 0.3s all;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                border: solid #fff;
+                border-width: 0 4px 4px 0;
+                display: inline-block;
+                padding: 3px;
+                width: 40%;
+                height: 40%;
+                top: 50%;
+                right: 50%;
+                transform: translate(75%, -50%) rotate(135deg);
+            }
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }       
+        #btnNext {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);    
+            &:hover {
+                background-color: #000;
+                transition: 0.3s all;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                border: solid #fff;
+                border-width: 0 4px 4px 0;
+                display: inline-block;
+                padding: 3px;
+                width: 40%;
+                height: 40%;
+                top: 50%;
+                right: 50%;
+                transform: translate(25%, -50%) rotate(-45deg);
+            }
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        .slider__nav-button {
+            border-radius: 50%;
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            background-color: #0005;
+            opacity: .8;
+            cursor: pointer;
+        }
+        .slider__nav {
+            position: absolute;
+            bottom: 3%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            .slider__navlink {
+                display: inline-block;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                border: 1px #fff solid;
+                background-color: #0008;
+                margin: 0 10px 0 10px;
+                cursor: pointer;
+                &.active {
+                    background-color: $color1;
+                }
+            }
+        }
+    }
+    }
+
+}
+
+#traditions {
+    .container {
+        border: 2px solid black;
+        box-shadow: 10px 10px 5px #0005;
+        background-color: $color1;
+        color: #000;
+        .row {
+            .factImg {
+                img {
+                    box-shadow: 10px 10px 5px #0005;
+                }
+            }
+        }
+    }  
+}
+
+#aboutChristmas {   
+    font-family: Arial, Helvetica, sans-serif;
+    .wrapper {
+        #info{
+            background-color: $color1;
+            box-shadow: 10px 10px 5px #0005;
+            width: 100%;
+            border: 2px solid #000;
+            padding: 20px;
+            border-radius: 5px;
+            p {
+                width: inherit;
+                background-color: inherit;
+            }
+        }
+        #info-nav{
+            margin: 0;
+            padding: 3px 0;
+            width: 100%;
+            list-style: none;
+            li {
+                display: inline;
+                border: 2px solid #000;
+                border-radius: 5px 5px 0px 0px;
+                border-bottom: 0;
+                margin-right: 3px;
+                padding: 10px;
+                a{
+                    border-radius: 0px 5px 5px 5px;
+                    font-size: 20px;
+                    color: #000;
+                    &:hover {   
+                        color:$color5;
+                    }
+                }
+                &.current { 
+                    background-color: $color1;
+                    padding-bottom: 10px; 
+                    a {
+                        color: $color5;
+                    } 
+                }  
+            }
+        }
+            
+    }
+}
+
+#bttBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-color: #0005;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s;
+    z-index: 1000;
+    &:hover {
+        cursor: pointer;
+        background-color: #000;
+    }
+    i {
+        font-size: 30px;
+        color: $color1;
+    }
+}
