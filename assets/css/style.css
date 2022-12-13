@@ -89,6 +89,7 @@ header nav#mobileNav ul li {
 }
 header nav#mobileNav ul li:hover {
   background-color: #F2F2F2;
+  color: #000;
 }
 header nav#mobileNav ul li a {
   text-align: center;
@@ -100,7 +101,9 @@ header nav#mobileNav ul li a {
   padding: 75px;
   margin-top: 60px;
   margin-bottom: 40px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #F2F2F2;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3333333333);
+  border: 2px solid #000;
   border-radius: 30px;
 }
 #cover .wrapper #timerHolder p {
@@ -108,7 +111,7 @@ header nav#mobileNav ul li a {
   color: #F22E2E;
   font-size: 42px;
 }
-#cover #coverHeader h2, #cover #coverHeader h3 {
+#cover #coverHeader h2 {
   text-align: center;
   color: #F22E2E;
 }
@@ -306,4 +309,61 @@ header nav#mobileNav ul li a {
 #bttBtn i {
   font-size: 30px;
   color: #F2F2F2;
+}
+
+#formContainer .wrapper .container .row #imgPart figure img {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3333333333);
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 100%;
+}
+#formContainer .wrapper .container .row #formPart {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#formContainer .wrapper .container .row #formPart input[type=button] {
+  margin: 0px auto;
+  border-radius: 8px;
+  width: 50%;
+  background-color: #F22E2E;
+  color: #F2F2F2;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #F2F2F2;
+}
+footer .wrapper .container {
+  padding: 0px;
+}
+footer .wrapper .container .row .fIcons {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+}
+footer .wrapper .container .row .fIcons a {
+  padding: 5px;
+  border-radius: 50%;
+}
+footer .wrapper .container .row .fIcons a i {
+  font-size: 30px;
+  color: #F2F2F2;
+}
+footer .wrapper .container .row .fIcons a:hover {
+  background-color: #F22E2E;
+}
+footer .wrapper .container .row .fIcons a:hover i {
+  color: #000;
+}
+footer .wrapper .container .row .copy h4 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.redBorder {
+  border: 1px solid #F22E2E;
 }/*# sourceMappingURL=style.css.map */

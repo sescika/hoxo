@@ -85,6 +85,7 @@ header {
                 transition: 0.7s all;
                 &:hover {
                     background-color: $color1;
+                    color: #000;
                 }
                 a {
                     text-align: center;
@@ -102,7 +103,9 @@ header {
             padding: 75px;
             margin-top: 60px;
             margin-bottom: 40px;
-            background-color: #0009;
+            background-color: $color1;
+            box-shadow: 10px 10px 5px #0005;
+            border: 2px solid #000;
             border-radius: 30px;
             p {
                 margin: 0px;
@@ -112,7 +115,7 @@ header {
         }
     }
     #coverHeader {
-        h2, h3 {
+        h2 {
             text-align: center;
             color: $color5;
         }
@@ -234,8 +237,7 @@ header {
             }
         }
     }
-    }
-
+}
 }
 
 #traditions {
@@ -324,4 +326,81 @@ header {
         font-size: 30px;
         color: $color1;
     }
+}
+
+#formContainer {
+    .wrapper {
+        .container {
+            .row {
+                #imgPart {
+                    figure {
+                        img {
+                            box-shadow: 10px 10px 5px #0005;
+                            border: 1px solid #000;
+                            border-radius: 10px;
+                            width: 100%;
+                        }
+                    }
+                }
+                #formPart {
+                font-family: Arial, Helvetica, sans-serif;
+                input[type=button] {
+                    margin: 0px auto;
+                    border-radius: 8px;
+                    width: 50%;
+                    background-color: $color5;
+                    color: $color1;
+                    padding: 16px 32px;
+                    cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $color1;
+    .wrapper {
+        .container {
+            padding: 0px;
+            .row {
+                .fIcons {
+                    padding: 10px;
+                    background-color: #0009;
+                    border-radius: 30px;
+                    a {
+                        padding: 5px;
+                        border-radius: 50%;
+                        i {
+                            font-size: 30px;
+                            color: $color1;
+                        }
+                        &:hover {
+                            background-color: $color5;
+                            i {
+                                color: #000;
+                            }
+    
+                        }
+                    }
+                }
+                .copy {
+                    h4 {
+                        text-align: center;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.redBorder {
+    border: 1px solid $color5;
 }

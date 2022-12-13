@@ -11,11 +11,14 @@
         }
     }
     #coverHeader {
-        h2, h3 {
+        h2{
             font-size: 22px;
         }
     }
   }
+  #formPart {
+    border-left: none;
+}
 }
 @media screen and (max-width: 769px){   
     header {
