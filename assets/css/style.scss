@@ -359,6 +359,21 @@ header {
     }
 }
 
+#author {
+    .container {
+        .row {
+            .imgAuthor {
+               figure {
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid #000;
+                box-shadow: 10px 10px 5px #0005;
+               }
+            }
+        }
+    }
+}
+
 footer {
     background-color: $color1;
     .wrapper {

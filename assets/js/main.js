@@ -1,5 +1,5 @@
 console.log("start");
-var errNum = 0;
+var errNum = true;
 window.onload = function() {
   let btn = document.getElementById("submitBtn");
   btn.addEventListener("click", formValidation);
@@ -8,8 +8,8 @@ window.onload = function() {
 //#region navDisplay
 
 //dodaj linkove i nazive kad smislis
-var navLinks = ["#", "#traditions", "#aboutChristmas","#sliderContainer", "#formContainer", "https://sescika.github.io/portfolio/"];
-var navTekst= ["Home", "Ideas", "History", "Gallery", "Send wishes", "About author"];
+var navLinks = ["index.html", "#traditions", "#aboutChristmas","#sliderContainer", "#formContainer", "#author"];
+var navTekst= ["Home", "Ideas", "History", "Gallery", "Send wishes", "Author"];
 
 let navId = document.getElementById("navigation");
 let ispisNavMeni = "<ul>"
@@ -34,8 +34,6 @@ navId.innerHTML = ispisNavMeni;
   navMob.innerHTML = ispisNavMeniMob;
   //#endregion
   //da bi target about strancie bio blank
-  navId.lastChild.lastChild.lastChild.setAttribute("target","_blank");
-  navMob.lastChild.lastChild.lastChild.setAttribute("target","_blank");
 //#endregion
 
 //Countodwn timer do bozica (25. dec.)
@@ -366,6 +364,7 @@ let formHolderId = document.getElementById("formContainer");
 //Obrada forme
 //#region obrada forme
 function formValidation() {
+
   //dohvatanje elemenata forme
   let objName, objSmail, objTxt, objRmail, arrType, objStyle, arrTos;
   objName = document.getElementById("senderName");
@@ -393,13 +392,14 @@ function formValidation() {
     if(objTxt.value.length < 15) {
       objTxt.nextElementSibling.classList.remove("hide");
       objTxt.classList.add("redBorder");
-      errNum++;
+      errNum = true;
       throw ("Be more creative! (15+ characters)")
     }
     else {
       objTxt.nextElementSibling.classList.add("hide");
       objTxt.nextElementSibling.innerHTML = "";
       objTxt.classList.remove("redBorder");
+      errNum = false;
     }
   }
   catch (err) 
@@ -418,12 +418,13 @@ function formValidation() {
   try {
     if(typeValues == "") {
       arrType[0].parentElement.parentElement.lastChild.classList.remove("hide");
-      errNum++;
+      errNum = true;
       throw("Pick either Gift or Card!");
     }
     else {
       arrType[0].parentElement.parentElement.lastChild.classList.add("hide");
       arrType[0].parentElement.parentElement.lastChild.innerHTML = "";
+      errNum = false;
     }
   }
   catch (err) 
@@ -439,12 +440,13 @@ function formValidation() {
   try {
     if(tosValue == "") {
       arrTos[0].nextElementSibling.nextElementSibling.classList.remove("hide");
-      errNum++;
+      errNum = true;
       throw ("You must agree to the following.")
     }
     else {
       arrTos[0].nextElementSibling.nextElementSibling.classList.add("hide");
       arrTos[0].nextElementSibling.nextElementSibling.innerHTML = "";
+      errNum = false;
     }
   }
   catch (err) {
@@ -457,17 +459,24 @@ function formValidation() {
     {
       objStyle.nextElementSibling.classList.remove("hide");
       objStyle.classList.add("redBorder");
-      errNum++;
+      errNum = true;
       throw("Select style!");
     }
     else{
       objStyle.nextElementSibling.classList.add("hide");
       objStyle.classList.remove("redBorder");
       objStyle.nextElementSibling.innerHTML = "";
+      errNum = false;
     } 
   }
   catch (err) {
     objStyle.nextElementSibling.innerHTML = err;
+  }
+  if(errNum) {
+    console.log('nije  ok');
+  }
+  else {
+    console.log("sve ok");
   }
 }
 function regexCheck(re, obj, message){
@@ -476,12 +485,13 @@ function regexCheck(re, obj, message){
     obj.nextElementSibling.classList.remove("hide");
     obj.nextElementSibling.innerHTML = message;
     obj.classList.add("redBorder");
-    errNum++;
+    errNum = true;
   }
   else{
     obj.nextElementSibling.classList.add("hide");
     obj.nextElementSibling.innerHTML = "";
     obj.classList.remove("redBorder");
+    errNum = false;
   }
 }
 
@@ -494,8 +504,9 @@ let ispisFooter = `<div class = "wrapper">
                       <div class="container">
                         <div class="row">
                           <div class="col-12 fIcons d-flex justify-content-center align-items-center justify-content-md-end">
+                            <a href="https://sescika.github.io/portfolio/index.html" target="_blank" class="me-md-5 me-3"><i class="fa-solid fa-user"></i></a>
                             <a href="sitemap.xml"><i class="fa-solid fa-sitemap"></i></a>
-                            <a href="dokumentacija.pdf" class="mx-md-5 ms-3"><i class="fa-solid fa-book"></i></a>
+                            <a href="dokumentacija.pdf" class="ms-md-5 ms-3"><i class="fa-solid fa-book"></i></a>
                           </div>
                         </div>
                         <hr>

@@ -330,6 +330,13 @@ header nav#mobileNav ul li a {
   cursor: pointer;
 }
 
+#author .container .row .imgAuthor figure {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3333333333);
+}
+
 footer {
   background-color: #F2F2F2;
 }
