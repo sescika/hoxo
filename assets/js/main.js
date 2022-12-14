@@ -379,11 +379,11 @@ function formValidation() {
   //regexi 
   let reSenderName, reEmail;
 
-  reSenderName = /^[A-Z][a-z]{2,16}(\s[A-Z][a-z]{2,16})+$/
+  reSenderName = /^[A-Z][a-z]{2,16}$/
   reEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   //email, name
-  regexCheck(reSenderName, objName, "Name must be 2 or more characters with first capital letter! eg. John Doe");
+  regexCheck(reSenderName, objName, "Name must be 2 or more characters with first capital letter! eg. John");
   regexCheck(reEmail, objSmail, "Email must be in valid format! eg. someone@gmail.com");
   regexCheck(reEmail, objRmail, "Email must be in valid format! eg. someone@gmail.com");
   
@@ -494,8 +494,8 @@ let ispisFooter = `<div class = "wrapper">
                       <div class="container">
                         <div class="row">
                           <div class="col-12 fIcons d-flex justify-content-center align-items-center justify-content-md-end">
-                            <a href="#"><i class="fa-solid fa-sitemap"></i></a>
-                            <a href="#" class="mx-md-5 ms-3"><i class="fa-solid fa-book"></i></a>
+                            <a href="sitemap.xml"><i class="fa-solid fa-sitemap"></i></a>
+                            <a href="dokumentacija.pdf" class="mx-md-5 ms-3"><i class="fa-solid fa-book"></i></a>
                           </div>
                         </div>
                         <hr>
@@ -507,8 +507,6 @@ let ispisFooter = `<div class = "wrapper">
                       </div>
                     </div>`
 objFooter.innerHTML = ispisFooter;
-
-
 //#endregion
 
 //#region jQuery code
